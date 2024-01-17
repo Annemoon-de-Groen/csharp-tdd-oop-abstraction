@@ -1,2 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram /> 
+
+Class User
+
+--properties --
+private string email
+private string password
+private bool enabled
+
+public bool Enabled {get}
+
+--methods--
+User(string email, string password)
+bool ValidPassword(string password)
+bool ValidEmail(string email)
+bool enableAccount(string user) //User is to check whether the operator has the right 
+                                  credentials to enable the account, 
+                                  return bool whether it was succesfull or not

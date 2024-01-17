@@ -1,2 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram />
+
+Class TodoItem
+ -- Properties --
+ private string title
+ private string details
+ public Status status
+ private DateTime createdOn
+ 
+-- methods --
+public TodoItem(string title, string details, Status status = NotDone)
+
+Enum Status
+ - NotDone
+ - Doing
+ - Done

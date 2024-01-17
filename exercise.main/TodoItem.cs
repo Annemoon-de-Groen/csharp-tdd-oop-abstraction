@@ -9,25 +9,26 @@ namespace exercise.main
     public class TodoItem
     {
 
-        public string title;
-        public string detail;
-        public string status;
+        private string title;
+        private string detail;
+        public Status Status;
+        private DateTime _createdOn;
 
-        public TodoItem(String title, String detail, String status)
+
+        public DateTime CreatedOn { get { return _createdOn; } }
+        public TodoItem(String title, String detail, Status status = Status.NotDone)
         {
             this.title = title;
             this.detail = detail;
-            this.status = status;
+            this.Status = status;
+            _createdOn = DateTime.Now;
         }
+    }
 
-        public void setStatus(String status)
-        {
-            this.status = status;
-        }
-
-        public String getStatus()
-        {
-            return this.status;
-        }
+    public enum Status
+    {
+        NotDone,
+        Doing,
+        Done
     }
 }
